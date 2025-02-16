@@ -24,6 +24,9 @@ public class Main {
 
         Transaction transaction= session.beginTransaction();
 
+        session.persist(p1);
+//        session.merge(p1);
+
         person p2 = session.
                 //byId(person.class).load(101);
                 find(person.class,101);
@@ -31,11 +34,8 @@ public class Main {
 
         System.out.println(p2);
 
-//        session.persist(p1);
-//        session.merge(p1);
-
-//        person p3=session.find(person.class,101);
-//        session.remove(p3);
+        person p3=session.find(person.class,101);
+        session.remove(p3);
 
         transaction.commit();
 
