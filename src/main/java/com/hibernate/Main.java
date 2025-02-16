@@ -24,15 +24,15 @@ public class Main {
 
         Transaction transaction= session.beginTransaction();
 
-//        person p2 = session.
-//                //byId(person.class).load(101);
-//                find(person.class,101);
-//
+        person p2 = session.
+                //byId(person.class).load(101);
+                find(person.class,101);
 
-//        System.out.println(p2);
+
+        System.out.println(p2);
 
 //        session.persist(p1);
-        session.merge(p1);
+//        session.merge(p1);
 
 //        person p3=session.find(person.class,101);
 //        session.remove(p3);
