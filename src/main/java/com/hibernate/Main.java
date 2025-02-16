@@ -11,9 +11,9 @@ public class Main {
     public static void main(String[] args) {
 
         person p1= new person();
-        p1.setPid(102);
-        p1.setPname("Ramesh");
-        p1.setTech("Py");
+        p1.setPid(101);
+        p1.setPname("Suresh");
+        p1.setTech("Java");
 
         SessionFactory sessionFactory =new Configuration()
                 .addAnnotatedClass(com.hibernate.person.class)
@@ -24,15 +24,18 @@ public class Main {
 
         Transaction transaction= session.beginTransaction();
 
-        person p2 = session.
-                //byId(person.class).load(101);
-                find(person.class,101);
+//        person p2 = session.
+//                //byId(person.class).load(101);
+//                find(person.class,101);
+//
 
-        System.out.println(p2);
+//        System.out.println(p2);
 
-        //session.persist(p1);
+//        session.persist(p1);
         session.merge(p1);
 
+//        person p3=session.find(person.class,101);
+//        session.remove(p3);
 
         transaction.commit();
 

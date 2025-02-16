@@ -4,11 +4,13 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
-@Entity
+@Entity(name="person_data")
 public class person {
 
     @Id
+    @Column(name="person_id")
     private int pid;
+    @Column(name="person_name")
     private String pname;
     private String tech;
 
