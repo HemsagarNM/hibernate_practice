@@ -21,7 +21,7 @@ public class Main {
                 .buildSessionFactory();
 
         Session session = sessionFactory.openSession();
-
+ 
         Transaction transaction= session.beginTransaction();
 
         session.persist(p1);
